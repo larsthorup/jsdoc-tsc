@@ -1,5 +1,6 @@
 import * as assert from 'assert';
-import * as Type from './type.js';
+
+/** @typedef {import('./type').Article} Article */
 
 /**
  *
@@ -17,7 +18,7 @@ assert.equal(addVat(amount, 0.2), 1440);
 
 /**
  *
- * @param {Type.Article[]} articles
+ * @param {Article[]} articles
  */
 const totalAmount = (articles) => {
   return articles.reduce((total, article) => {
@@ -25,7 +26,7 @@ const totalAmount = (articles) => {
   }, 0);
 };
 
-/** @type {Type.Article} */
+/** @type {Article} */
 const article = {
   title: 'The best book in the world',
   price: 10,
